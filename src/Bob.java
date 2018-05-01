@@ -22,7 +22,7 @@ public class Bob {
             System.out.println("Bob says: Dude chill bro...");
         } else if(input.charAt(length) == '?'){
             System.out.println("Bob says: Sure bro...");
-        } else if(input.equals("Bob")){
+        } else if(input.trim().equals("")){
             System.out.println("Bob says: Fine! Be that way!");
         } else {
             System.out.println("Bob says: Whatevs bruh");
