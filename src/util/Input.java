@@ -43,7 +43,6 @@ public class Input {
 
     public static String getString(){
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
-        System.out.println("Enter a string: ");
         String input = sc.next();
         return input;
     }
@@ -56,7 +55,6 @@ public class Input {
     }
     public static int getInt(){
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
-        System.out.println("Enter an integer: ");
         int input = sc.nextInt();
         return input;
     }
