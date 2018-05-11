@@ -6,22 +6,33 @@ import util.Input;
 
 public class GradesApplication {
     public static void main(String[] args){
+        Student[] studentArray = Cohort.findAll();
         HashMap<String, Student> students = new HashMap<>();
-        Student jason = new Student("Jason");
-        jason.addGrade(95); jason.addGrade(90); jason.addGrade(70); jason.addGrade(60);
-        students.put("jayRoxs", jason);
+        int length = studentArray.length - 1;
+        for(int i = 0; i <= length; i++){
+            int Random = (int)(Math.random()*100);
+            for(int x = 0; x < 6; x++){
+                int grade = (int)(Math.random()*50)+50;
+                studentArray[i].addGrade(grade);
+            }
+            students.put(studentArray[i].getName() + Random, studentArray[i]);
+        }
 
-        Student sonya = new Student("Sonya");
-        sonya.addGrade(85); sonya.addGrade(79); sonya.addGrade(89); sonya.addGrade(94);
-        students.put("synCity", sonya);
-
-        Student dante = new Student("Dante");
-        dante.addGrade(77); dante.addGrade(95); dante.addGrade(86); dante.addGrade(73);
-        students.put("myInferno", dante);
-
-        Student rochelle = new Student("Rochelle");
-        rochelle.addGrade(99); rochelle.addGrade(103); rochelle.addGrade(101); rochelle.addGrade(93);
-        students.put("deLyonesse", rochelle);
+//        Student jason = new Student("Jason");
+//        jason.addGrade(95); jason.addGrade(90); jason.addGrade(70); jason.addGrade(60);
+//        students.put("jayRoxs", jason);
+//
+//        Student sonya = new Student("Sonya");
+//        sonya.addGrade(85); sonya.addGrade(79); sonya.addGrade(89); sonya.addGrade(94);
+//        students.put("synCity", sonya);
+//
+//        Student dante = new Student("Dante");
+//        dante.addGrade(77); dante.addGrade(95); dante.addGrade(86); dante.addGrade(73);
+//        students.put("myInferno", dante);
+//
+//        Student rochelle = new Student("Rochelle");
+//        rochelle.addGrade(99); rochelle.addGrade(103); rochelle.addGrade(101); rochelle.addGrade(93);
+//        students.put("deLyonesse", rochelle);
 
         System.out.println("Welcome!");
         System.out.println("Here are the gitHub usernames of our students: ");
