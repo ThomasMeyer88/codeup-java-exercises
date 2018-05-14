@@ -64,7 +64,7 @@ public class GradesApplication {
         System.out.println("______________________________________________");
         System.out.println("Would you like to see another student?");
         String viewMore = Input.getString();
-        if(viewMore.equals("yes") || viewMore.equals("Yes")){
+        if(viewMore.equalsIgnoreCase("y") || viewMore.equalsIgnoreCase("yes")){
             System.out.println("Please enter the student name: ");
             String studentName = Input.getString();
                     showInfo(students, studentName);
