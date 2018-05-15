@@ -1,5 +1,6 @@
 package util;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -48,14 +49,34 @@ public class Input {
     }
 
     public static double getDouble(){
-        Scanner sc = new Scanner(System.in).useDelimiter("\n");
-        System.out.println("Enter a double: ");
-        double input = sc.nextDouble();
-        return input;
+
+
+        try {
+            Scanner sc = new Scanner(System.in).useDelimiter("\n");
+            double input = sc.nextDouble();
+            return Double.valueOf(input);
+
+
+        }
+        catch(InputMismatchException e){
+            System.out.println("That is not a double!");
+            return getDouble();
+        }
+
+
     }
-    public static int getInt(){
-        Scanner sc = new Scanner(System.in).useDelimiter("\n");
-        int input = sc.nextInt();
-        return input;
+    public static int getInt() {
+
+
+        try {
+            Scanner sc = new Scanner(System.in).useDelimiter("\n");
+            int input = sc.nextInt();
+            return Integer.valueOf(input);
+
+        } catch (InputMismatchException e) {
+            System.out.println("That is not an int!");
+            return getInt();
+        }
     }
+
 }

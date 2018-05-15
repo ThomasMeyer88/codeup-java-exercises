@@ -2,11 +2,10 @@ package util;
 
 public class InputTest {
     public static void main(String[] args) {
-        System.out.println(Input.yesNo());
-        Input.getInt(1,10);
-        Input.getDouble(5.3,11.9);
-        System.out.println(Input.getString());
-        System.out.println(Input.getDouble());
+
+        System.out.println("Enter an int: ");
         System.out.println(Input.getInt());
+        System.out.println("Enter a double: ");
+        System.out.println(Input.getDouble());
     }
 }
